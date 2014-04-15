@@ -1,0 +1,17 @@
+{
+    "name": "rsa",
+    "comName":"Rsa",
+    "version": "1.0",
+    "desc": "RSA算法加密组件",
+    "tag":"RSA加密 ",
+    "githubName":"alvinhui",
+    "author": {
+        "name": "梧忌 ",
+        "email": "wuji.xwt@alibaba-inc.com",
+        "page": "http://alvinhui.github.io"
+    },
+	"flexComboPort":"8081",
+	"reserveServerPort":"8080",
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
