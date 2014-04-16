@@ -60,7 +60,7 @@ KISSY.add(function (S, BigInteger, SecureRandom) {
 
     // private key
     this.d = null;
-    
+
     this.p = null;
     this.q = null;
     this.dmp1 = null;
@@ -68,22 +68,14 @@ KISSY.add(function (S, BigInteger, SecureRandom) {
     this.coeff = null;
   }
 
-  // Set the public key fields N from hex strings
-  function RSASetPublic(N) {
-    if(N != null && N.length > 0) {
+  // Set the public key fields N and e from hex strings
+  function RSASetPublic(N,E) {
+    if(N != null && E != null && N.length > 0 && E.length > 0) {
       this.n = parseBigInt(N,16);
-    }
-    else
-      throw new Error("Invalid RSA public key");
-  }
-
-  // Set encryption exponent from hex strings
-  function RSASetEncryptionExponent(E) {
-    if(E != null && E.length > 0) {
       this.e = parseInt(E,16);
     }
     else
-      throw new Error("Invalid RSA encryption exponent");
+      throw new Error("Invalid RSA public key");
   }
 
   // Perform raw public operation on "x": return x^e (mod n)
@@ -112,7 +104,6 @@ KISSY.add(function (S, BigInteger, SecureRandom) {
 
   // public
   RSAKey.prototype.setPublic = RSASetPublic;
-  RSAKey.prototype.setEncryptionExponent = RSASetEncryptionExponent;
   RSAKey.prototype.encrypt = RSAEncrypt;
   //RSAKey.prototype.encrypt_b64 = RSAEncryptB64;
 
@@ -149,13 +140,15 @@ KISSY.add(function (S, BigInteger, SecureRandom) {
     return ret;
   }
 
-  // Set the private key fields D from hex strings
-  function RSASetPrivate(D) {
-    if(D != null && D.length > 0) {
+  // Set the private key fields N, e, and d from hex strings
+  function RSASetPrivate(N,E,D) {
+    if(N != null && E != null && N.length > 0 && E.length > 0) {
+      this.n = parseBigInt(N,16);
+      this.e = parseInt(E,16);
       this.d = parseBigInt(D,16);
     }
     else
-      throw new Error("Invalid RSA private key");
+      alert("Invalid RSA private key");
   }
 
   // Set the private key fields N, e, d and CRT params from hex strings

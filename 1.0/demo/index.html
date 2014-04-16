@@ -60,8 +60,7 @@
             var before = new Date();
 
             var rsa = new Rsa();
-            rsa.setPublic(publicKey);
-            rsa.setEncryptionExponent(encryptionExponent);
+            rsa.setPublic(publicKey, encryptionExponent);
             var res = rsa.encrypt($("#plaintext").val());
 
             var after = new Date();
@@ -76,9 +75,7 @@
             var before = new Date();
 
             var rsa = new Rsa();
-            rsa.setPublic(publicKey);
-            rsa.setEncryptionExponent(encryptionExponent);
-            rsa.setPrivate(privateKey);
+            rsa.setPrivate(publicKey, encryptionExponent, privateKey);
             var res = rsa.decrypt($("#ciphertext").val());
 
             var after = new Date();

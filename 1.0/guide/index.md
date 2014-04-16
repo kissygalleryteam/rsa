@@ -1,18 +1,18 @@
 ## 综述
 
-Rsa是一个RSA算法加密库。
+Rsa 是一个 RSA 算法加密库。
 
 * 版本：1.0
 * 作者：梧忌 
 * demo：[http://gallery.kissyui.com/rsa/1.0/demo/index.html](http://gallery.kissyui.com/rsa/1.0/demo/index.html)
 
 ## 初始化组件
-		
-    S.use('gallery/rsa/1.0/index', function (S, Rsa) {
-         var rsa = new Rsa();
-    })
-	
-	
+
+```javascript
+S.use('gallery/rsa/1.0/index', function (S, Rsa) {
+    var rsa = new Rsa();
+})
+···
 
 ## API说明
 
@@ -32,16 +32,13 @@ S.use("gallery/rsa/1.0/index, node", function (S, Rsa) {
     var rsa = new Rsa();
 
     // 设置公钥
-    rsa.setPublic(publicKey);
-
-    // 设置加密指数
-    rsa.setEncryptionExponent(encryptionExponent);
+    rsa.setPublic(publicKey, encryptionExponent);
 
     // 产生密文
     var res = rsa.encrypt("test");
 
     // 设置私钥
-    rsa.setPrivate(privateKey);
+    rsa.setPrivate(publicKey, encryptionExponent, privateKey);
 
     // 解密
     rsa.decrypt(res);
