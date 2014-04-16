@@ -12,7 +12,7 @@ Rsa 是一个 RSA 算法加密库。
 S.use('gallery/rsa/1.0/index', function (S, Rsa) {
     var rsa = new Rsa();
 })
-···
+```
 
 ## API说明
 
