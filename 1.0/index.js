@@ -51,9 +51,16 @@ KISSY.add(function (S, BigInteger, SecureRandom) {
 
   // "empty" RSA key constructor
   function RSAKey() {
+
+    // publice key
     this.n = null;
+
+    // encryption exponent
     this.e = 0;
+
+    // private key
     this.d = null;
+    
     this.p = null;
     this.q = null;
     this.dmp1 = null;

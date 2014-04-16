@@ -30,9 +30,20 @@ S.use("gallery/rsa/1.0/index, node", function (S, Rsa) {
 
     // 新建一个 RSA 对象
     var rsa = new Rsa();
+
+    // 设置公钥
     rsa.setPublic(publicKey);
+
+    // 设置加密指数
     rsa.setEncryptionExponent(encryptionExponent);
-    rsa.setPrivate(privateKey);
+
+    // 产生密文
     var res = rsa.encrypt("test");
+
+    // 设置私钥
+    rsa.setPrivate(privateKey);
+
+    // 解密
+    rsa.decrypt(res);
 });
 ```
