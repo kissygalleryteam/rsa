@@ -2,14 +2,14 @@
 
 Rsa 是一个 RSA 算法加密库。
 
-* 版本：2.0.0
+* 版本：2.0.1
 * 作者：梧忌 
-* demo：[http://kg.kissyui.com/rsa/2.0.0/demo/index.html](http://kg.kissyui.com/rsa/2.0.0/demo/index.html)
+* demo：[http://kg.kissyui.com/rsa/2.0.1/demo/index.html](http://kg.kissyui.com/rsa/2.0.1/demo/index.html)
 
 ## 初始化组件
 
 ```javascript
-S.use('kg/rsa/2.0.0/index', function (S, Rsa) {
+S.use('kg/rsa/2.0.1/index', function (S, Rsa) {
     var rsa = new Rsa();
 })
 ```
@@ -17,16 +17,16 @@ S.use('kg/rsa/2.0.0/index', function (S, Rsa) {
 ## API说明
 
 ```javascript
-S.use("kg/rsa/2.0.0/index, node", function (S, Rsa) {
+S.use("kg/rsa/2.0.1/index, node", function (S, Rsa) {
 
     // 公钥
-    var publicKey = "eeadbad02dd8c1cc2.0.05585691da3beb907542c7a3a57d98e005822b9b1852bb102419d63d13b1f8f332e88fae0d156d74c1495e705073310abfacfc8085f74fab89033c82fd0f7728ba644cc5da6df07535273e91f5d19bfc4be787d0de16aad6cf9bd0ad74427862c7c92ed97bc419a7c3b05cc1b36a3421fef0cbb2cc72fd";
+    var publicKey = "eeadbad02dd8c1cc2.0.15585691da3beb907542c7a3a57d98e005822b9b1852bb102419d63d13b1f8f332e88fae0d156d74c1495e705073310abfacfc8085f74fab89033c82fd0f7728ba644cc5da6df07535273e91f5d19bfc4be787d0de16aad6cf9bd0ad74427862c7c92ed97bc419a7c3b05cc1b36a3421fef0cbb2cc72fd";
 
     // 私钥
-    var privateKey = "3ff57a2c333cf4a1d573a13a8197339b6a78a1ce91c1d528544fe593fdd9c4c2.0.00f9c84d695228a0dd1c4944c15e17a15617e61ba4334bb1da043a0de6807df6314aa0a40cca0e87726f26c059262092f7ace483f197f1ca1dc372e38ce8a11d3f90d70913e77e39329db092db836c041d316e277d79893054f6229a26fce99";
+    var privateKey = "3ff57a2c333cf4a1d573a13a8197339b6a78a1ce91c1d528544fe593fdd9c4c2.0.10f9c84d695228a0dd1c4944c15e17a15617e61ba4334bb1da043a0de6807df6314aa0a40cca0e87726f26c059262092f7ace483f197f1ca1dc372e38ce8a11d3f90d70913e77e39329db092db836c041d316e277d79893054f6229a26fce99";
 
     // 加密指数
-    var encryptionExponent = "2.0.001";
+    var encryptionExponent = "2.0.101";
 
     // 新建一个 RSA 对象
     var rsa = new Rsa();
