@@ -4,7 +4,7 @@ Rsa 是一个 RSA 算法加密库。
 
 * 版本：2.0.1
 * 作者：梧忌 
-* demo：[http://kg.kissyui.com/rsa/2.0.1/demo/index.html](http://kg.kissyui.com/rsa/2.0.1/demo/index.html)
+* demo：[http://gallery.kissyui.com/rsa/2.0.1/demo/index.html](http://gallery.kissyui.com/rsa/2.0.1/demo/index.html)
 
 ## 初始化组件
 
